@@ -3,6 +3,7 @@ package com.example.mymemory
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
@@ -21,6 +22,8 @@ class MainActivity : AppCompatActivity() {
     private  lateinit var tvNumbMoves : TextView
     private  lateinit var tvNumbPairs  : TextView
     private  lateinit var clRoot  : ConstraintLayout
+    private  lateinit var ibRefresh  : ImageButton
+
 
 
     private  var boardSize : BoardSize = BoardSize.HARD
@@ -34,6 +37,32 @@ class MainActivity : AppCompatActivity() {
         tvNumbMoves = findViewById(R.id.tvNumbMoves)
         tvNumbPairs = findViewById(R.id.tvnumbPairs)
         clRoot = findViewById(R.id.clRoot)
+
+        ibRefresh = findViewById(R.id.ibrefresh)
+        ibRefresh.setOnClickListener{
+            println("Hello")
+            //memoryGame.faceDownAllCards()
+            memoryGame = MemoryGame(boardSize)
+
+            adapter =  MemoryBoardAdapter(this, boardSize, memoryGame.cards, object :MemoryBoardAdapter.CardClickListener{
+                override fun onCardClicked(position: Int) {
+                    updateGameWithFlip(position)
+                }
+            })
+            rvBoard.adapter = adapter
+            rvBoard.setHasFixedSize(true)
+            rvBoard.layoutManager = GridLayoutManager(this, boardSize.getWidth())
+            tvNumbMoves.text = "Moves : 0"
+            tvNumbPairs.text = "Pairs: 0/12"
+
+
+
+
+            adapter.notifyDataSetChanged()
+
+
+
+        }
 
         memoryGame = MemoryGame(boardSize)
 

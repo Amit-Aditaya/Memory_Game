@@ -58,6 +58,12 @@ class  MemoryGame(private  val boardSize: BoardSize){
 
         }
     }
+     fun faceDownAllCards(){
+        for(card in cards){
+            card.isFaceUp = false
+            card.isMatched = false
+        }
+    }
 
     fun haveWonGame(): Boolean {
 
