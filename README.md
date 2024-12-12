@@ -8,16 +8,19 @@ A simple and fun memory game developed in Kotlin for Android devices. The goal i
 - **Progress Tracking**: Displays the number of moves and matched pairs.
 - **Restart Option**: Quickly reset the game to try again.
 
+## Download Link
+https://drive.google.com/file/d/1iVeBDtCZ0gvX0l7BH9UVUyqeuxw1tmc0/view?usp=drive_link
+
 ## Screenshots
 
 ### Game Board
-![ss1](https://github.com/user-attachments/assets/ae70a7ac-a8ad-4678-b9d4-f2c1436c8dab)
+<img src="https://github.com/user-attachments/assets/ae70a7ac-a8ad-4678-b9d4-f2c1436c8dab" alt="Game Board" width="500">
 
 ### Matched Pairs
-![ss2](https://github.com/user-attachments/assets/d1a46566-2f9c-44c5-a9b9-7064da1cc7f6)
+<img src="https://github.com/user-attachments/assets/d1a46566-2f9c-44c5-a9b9-7064da1cc7f6" alt="Game Board" width="500">
 
 ### Finished Game
-![ss3](https://github.com/user-attachments/assets/a47261ec-f0ac-4826-a2ce-34f485021e83)
+<img src="https://github.com/user-attachments/assets/a47261ec-f0ac-4826-a2ce-34f485021e83" alt="Game Board" width="500">
 
 ## Getting Started
 
@@ -46,5 +49,5 @@ A simple and fun memory game developed in Kotlin for Android devices. The goal i
 1. Kotlin: Programming language used for app development.
 2. Android Studio: IDE used for development.
 
-###Contributing
+### Contributing
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
